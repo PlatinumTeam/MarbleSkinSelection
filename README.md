@@ -3,6 +3,8 @@ A marble skin selection mod for Marble Blast Gold! This will allow you to place 
 
 Simply put your skins inside of the folder located at "marble/data/shapes/balls/". In order for the skins to show up in the selector, name them skinname.marble.jpeg or skinname.marble.png!
 
+![](http://i.imgur.com/B7CcfvF.png)
+
 The skin that you choose will be saved inside of the prefs.cs file.
 
 ## Installation
