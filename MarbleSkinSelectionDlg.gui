@@ -1,0 +1,126 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(MarbleSkinSelectionDlg) {
+   profile = "GuiDialogProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiBitmapCtrl() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "112 90";
+      extent = "416 300";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      bitmap = "~/client/help/help_gui";
+      wrap = "0";
+
+      new GuiMLTextCtrl(MSSD_Text) {
+         profile = "GuiMLTextProfile";
+         horizSizing = "center";
+         vertSizing = "bottom";
+         position = "35 30";
+         extent = "345 32";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+      };
+      new GuiTextListCtrl(MSSD_List) {
+         profile = "GuiTextArrayProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "0 0";
+         extent = "80 16";
+         minExtent = "8 8";
+         visible = "0";
+         helpTag = "0";
+         enumerate = "0";
+         resizeCell = "1";
+         columns = "0";
+         fitParentWidth = "1";
+         clipColumnText = "0";
+            noDuplicates = "false";
+      };
+      new GuiObjectView(MSSD_ObjectView) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "center";
+         vertSizing = "center";
+         position = "95 66";
+         extent = "226 168";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         cameraZRot = "0";
+         forceFOV = "0";
+         model = "~/data/shapes/balls/ball-superball.dts";
+         skin = "base";
+         cameraRotX = "0.5";
+         cameraZRotSpeed = "0.001";
+         orbitDistance = "1.34641";
+         autoSize = "1";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "center";
+         vertSizing = "bottom";
+         position = "152 218";
+         extent = "111 59";
+         minExtent = "8 8";
+         visible = "1";
+         command = "MarbleSkinSelectionDlg.apply();";
+         helpTag = "0";
+         text = "apply";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./play/play";
+      };
+      new GuiBitmapButtonCtrl(MSSD_prev) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "center";
+         position = "45 121";
+         extent = "77 58";
+         minExtent = "8 8";
+         visible = "1";
+         command = "MarbleSkinSelectionDlg.prev();";
+         accelerator = "left";
+         helpTag = "0";
+         text = "Prev";
+         groupNum = "-1";
+         buttonType = "RepeaterButton";
+         repeatPeriod = "350";
+         repeatDecay = "0.9";
+         bitmap = "./play/prev";
+      };
+      new GuiBitmapButtonCtrl(MSSD_next) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "center";
+         position = "311 120";
+         extent = "75 60";
+         minExtent = "8 8";
+         visible = "1";
+         command = "MarbleSkinSelectionDlg.next();";
+         accelerator = "right";
+         helpTag = "0";
+         text = "Next";
+         groupNum = "-1";
+         buttonType = "RepeaterButton";
+         repeatPeriod = "350";
+         repeatDecay = "0.9";
+         bitmap = "./play/next";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
